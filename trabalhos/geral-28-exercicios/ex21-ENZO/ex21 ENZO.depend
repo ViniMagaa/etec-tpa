@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1686925296 source:c:\users\jvcriper-infi231\desktop\ex21 enzo\main.c
+	<stdio.h>
+	<stdlib.h>
+

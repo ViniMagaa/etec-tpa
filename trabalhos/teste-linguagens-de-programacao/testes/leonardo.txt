@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int option;
+
+    do
+{
+    printf("\nQual área de desenvolvimento você quer atuar? \n1. Backend\n2. Frontend\n3. Programação Mobile\n");
+    scanf("%d", &option);
+    
+    switch (option) {
+    
+    case 1:
+        printf("Aqui estão Algumas opções para de linguagens para backend para você:\n1. Python\n2. Java\n3. C# \n\n");
+        break;
+    
+    case 2:
+        printf("Aqui estão Algumas opções para de linguagens para frontend para você:\n1. HTML\n2. CSS\n3. JavaScript\n");
+        break;
+    
+    case 3:
+        printf("Aqui estão Algumas opções para de linguagens para Programação Mobile para você:\n1. Swift\n2. Kotlin\n3. Java\n");
+        break;
+    
+    default:
+        printf("Número inválido\n");
+        break;
+    }
+} while (option);
+
+return 0;
+}

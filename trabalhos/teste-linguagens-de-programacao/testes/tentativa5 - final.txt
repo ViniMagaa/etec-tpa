@@ -1,0 +1,233 @@
+#include <stdio.h>
+#include <locale.h>
+
+void exibirDados(char nome[], char sobre[], char dificuldade[], char popularidade[], char usado, char salario[]) {
+    int option, voltar;
+    
+    do  {
+        system("clear");
+        printf("A linguagem ideal para você é '%s'!\n", nome);
+        printf("Escolha alguma opção para saber mais sobre ela:\n");
+        printf("[1] Sobre\n");
+        printf("[2] Dificuldade\n");
+        printf("[3] Popularidade\n");
+        printf("[4] Usado em...\n");
+        printf("[5] Salário médio de um programador da área\n");
+        printf("[6] SAIR\n");
+        scanf("%d", &option);
+        switch (option)
+        {
+            case 1:
+                printf("\n[SOBRE]\n %s", sobre);
+                printf("\n\n(Digite '0' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 2:
+                printf("\n[DIFICULDADE]\n %s", dificuldade);
+                printf("\n\n(Digite '0' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 3:
+                printf("\n[POPULARIDADE]\n %s", popularidade);
+                printf("\n\n(Digite '0' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 4:
+                printf("\n[USADO EM...]\n %s", usado);
+                printf("\n\n(Digite '0' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 5:
+                printf("\n[SALÁRIO MÉDIO]\n %s", salario);
+                printf("\n\n(Digite '0' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 6:
+                exit(0);
+            default:
+                printf("\n[ERRO]");
+                printf("\nDigite '0' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                scanf("%d", &voltar);
+        }
+    } while (voltar == 0);
+    
+    return;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int option;
+    char erro[] = "\n\n\nOpção inválida! Tente novamente.\n\n\n";
+    
+    /////declaração das varaveis sobre as informações das linguagens
+    char python[] = "Python";
+    char pySobre[] = "O Python é uma linguagem de programação amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML). Os desenvolvedores usam o Python porque é eficiente e fácil de aprender e pode ser executada em muitas plataformas diferentes.";
+    char pyDificuldade[] = "1 de 5 estrelas.";
+    char pyPopularidade[] = "4.5 de 5 estrelas.";
+    char pyUsado[] = "Essa linguagem é utilizada no Youtube, Instagram e Spotify.";
+    char pySalario[] = "A média salarial para Desenvolvedor Python no Brasil é de R$ 4.130,00.";
+    
+    char java[] = "Java";
+    char javaSobre[] = "Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems, que em 2008 foi adquirido pela empresa Oracle Corporation.";
+    char javaDificuldade[] = "3 de 5 estrelas.";
+    char javaPopularidade[] = "5 de 5 estrelas.";
+    char javaUsado[] = "Essa linguagem é utilizada no Gmail, Minecraft, maioria dos aplicativos Android e aplicativos de empresas.";
+    char javaSalario[] = "A média salarial para Desenvolvedor Java no Brasil é de R$ 3.745,00.";
+    
+    char c[] = "C";
+    char cSobre[] = "C é uma linguagem de programação compilada de propósito geral, estruturada, imperativa, procedural, padronizada pela Organização Internacional para Padronização, criada em 1972 por Dennis Ritchie na empresa AT&T Bell Labs para desenvolvimento do sistema operacional Unix.";
+    char cDificuldade[] = "3 de 5 estrelas.";
+    char cPopularidade[] = "5 de 5 estrelas.";
+    char cUsado[] = "Essa linguagem é utilizada em Sistemas Operacionais e Hardware.";
+    char cSalario[] = "O salário médio de um Desenvolvedor C no Brasil é de R$3.250.";
+    
+    char cmais[] = "C++";
+    char cmaisSobre[] = "C++ é uma linguagem de programação compilada multi-paradigma e de uso geral. Desde os anos 1990 é uma das linguagens comerciais mais populares, sendo bastante usada também na academia por seu grande desempenho e base de utilizadores.";
+    char cmaisDificuldade[] = "4 de 5 estrelas.";
+    char cmaisPopularidade[] = "4.5 de 5 estrelas.";
+    char cmaisUsado[] = "Essa linguagem é utilizada em Sistemas Operacionais, Hardware e navegadores.";
+    char cmaisSalario[] = "O salário médio nacional de Desenvolvedor C++ é de R$6.473 no Brasil.";
+    
+    char javascript[] = "JavaScript";
+    char jsSobre[] = "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.";
+    char jsDificuldade[] = "2 de 5 estrelas.";
+    char jsPopularidade[] = "4 de 5 estrelas.";
+    char jsUsado[] = "Essa linguagem é utilizada no Paypal e no front-end da maioria dos websites.";
+    char jsSalario[] = "O salário médio nacional de Desenvolvedor JavaScript é de R$4.500.";
+    
+    char csharp[] = "C#";
+    char csharpSobre[] = "C# é uma linguagem de programação, multiparadigma, de tipagem forte, desenvolvida pela Microsoft como parte da plataforma .NET. A sua sintaxe orientada a objetos foi baseada no C++ mas inclui muitas influências de outras linguagens de programação, como Object Pascal e, principalmente, Java.";
+    char csharpDificuldade[] = "3 de 5 estrelas.";
+    char csharpPopularidade[] = "4.5 de 5 estrelas.";
+    char csharpUsado[] = "Essa linguagem é utilizada por empresas e aplicações do Windows.";
+    char csharpSalario[] = "O salário médio nacional de Desenvolvedor C# é de R$5.062.";
+    
+    char ruby[] = "Ruby";
+    char rubySobre[] = "Ruby é uma linguagem de programação interpretada multiparadigma, de tipagem dinâmica e forte, com gerenciamento de memória automático, originalmente planejada e desenvolvida no Japão em 1995, por Yukihiro 'Matz' Matsumoto, para ser usada como linguagem de script.";
+    char rubyDificuldade[] = "2 de 5 estrelas.";
+    char rubyPopularidade[] = "3.5 de 5 estrelas.";
+    char rubyUsado[] = "Essa linguagem é utilizada no Hulu, Groupon e Slideshare.";
+    char rubySalario[] = "A média salarial para desenvolvedor Ruby é de R$ 4.450,00 no Brasil.";
+    
+    char php[] = "PHP";
+    char phpSobre[] = "PHP é uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicações presentes e atuantes no lado do servidor, capazes de gerar conteúdo dinâmico na World Wide Web.";
+    char phpDificuldade[] = "2 de 5 estrelas.";
+    char phpPopularidade[] = "4 de 5 estrelas.";
+    char phpUsado[] = "Essa linguagem é utilizada no Wordpress, Wikipedia e Flickr.";
+    char phpSalario[] = "A média salarial de Desenvolvedor PHP é de R$2.679,00.";
+    
+    char objectivec[] = "Objective-C";
+    char objcSobre[] = "Objective-C, denominado frequentemente de ObjC ou mais raramente de Objective C ou Obj-C, é uma linguagem de programação reflexiva orientada a objecto que adiciona transmissão de mensagens no estilo Smalltalk para o C.";
+    char objcDificuldade[] = "3 de 5 estrelas.";
+    char objcPopularidade[] = "3 de 5 estrelas.";
+    char objcUsado[] = "Essa linguagem é utilizada na maioria dos aplicativos iOS e boa parte do Mac OS X.";
+    char objcSalario[] = "A média salarial de Desenvolvedor de Objective-C é de R$ 6.090.";
+    
+    
+    ////menu principal
+    do
+    {
+        printf("Olá, seja bem vindo a um guia de linguagens de programação! \nSe você ainda não é um programador e não sabe qual das diversas linguagens escolher, este teste é para você!\n\n\n");
+        printf("Vamos começar com as perguntas:\n\nPorque você quer aprender programação?\n");
+        printf(" [1] Para me divertir\n");
+        printf(" [2] Para ganhar dinheiro\n");
+        printf(" [3] Estou apenas interessado\n");
+        printf(" [4] Para aperfeiçoar a mim mesmo\n");
+        scanf("%d", &option);
+        
+        switch(option)
+        {
+            case 1:
+            case 3:
+            case 4:
+                printf("ta, pera ");
+                break;
+            case 2:
+                printf("\nPor qual meio?\n");
+                printf(" (0) VOLTAR AO INÍCIO\n");
+                printf(" [1] Através de um emprego\n");
+                printf(" [2] Tenho uma ideia de startup\n");
+                scanf("%d", &option);
+                switch(option)
+                {
+                    case 1:
+                        printf("\nPara qual plataforma/setor?\n");
+                        printf(" (0) VOLTAR AO INÍCIO\n");
+                        printf(" [1] Games\n");
+                        printf(" [2] Mobile\n");
+                        printf(" [3] Web\n");
+                        printf(" [4] Grandes empresas de tecnologia\n");
+                        scanf("%d", &option);
+                        switch (option)
+                        {
+                            case 1:
+                                exibirDados(cmais, cmaisSobre, cmaisDificuldade, cmaisPopularidade, cmaisUsado, cmaisSalario);
+                                break;
+                            case 2:
+                            printf("\nQual Sistema Operacional?\n");
+                            printf(" (0) VOLTAR AO INÍCIO\n");
+                            printf(" [1] iOS\n");
+                            printf(" [2] Android\n");
+                            scanf("%d", &option);
+                            switch (option) {
+                                case 1:
+                                exibirDados(objectivec, objcSobre, objcDificuldade, objcPopularidade, objcUsado, objcSalario);
+                                break;
+                                case 2:
+                                exibirDados(java, javaSobre, javaDificuldade, javaPopularidade, javaUsado, javaSalario);
+                                break;
+                                default:
+                                printf(erro);
+                                break;
+                            }
+                            case 3:
+                            printf("\nEm qual área?\n");
+                            printf(" (0) VOLTAR AO INÍCIO\n");
+                            printf(" [1] Front-end: parte visual de um site, aquilo que conseguimos interagir\n");
+                            printf(" [2] Back-end: é o código que conecta a internet com o banco de dados, gerencia as conexões dos usuários e alimenta a aplicação web\n");
+                            scanf("%d", &option);
+                            switch (option) {
+                                case 1:
+                                exibirDados(javascript, jsSobre, jsDificuldade, jsPopularidade, jsUsado, jsSalario);
+                                break;
+                                case 2:
+                                printf("\nGostaria de trabalhar para a Microsoft?\n");
+                                printf(" (0) VOLTAR AO INÍCIO\n");
+                                printf(" [1] Sim\n");
+                                printf(" [2] Não\n");
+                                scanf("%d", &option);
+                                switch (option) {
+                                    case 1:
+                                    exibirDados(csharp, csharpSobre, csharpDificuldade, csharpPopularidade, csharpUsado, csharpSalario);
+                                    break;
+                                    case 2:
+                                    exibirDados(java, javaSobre, javaDificuldade, javaPopularidade, javaUsado, javaSalario);
+                                    break;
+                                    default:
+                                    printf(erro);
+                                    break;
+                                }
+                                break;
+                                default:
+                                printf(erro);
+                                break;
+                            }
+                            default:
+                            printf(erro);
+                            break;
+                        }
+                        break;
+                    default:
+                    printf(erro);
+                    break;
+                }
+                break;
+            default:
+            printf(erro);
+            break;
+        }
+    } while(option == 0);
+    
+    return 0;
+}

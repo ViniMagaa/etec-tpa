@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1687171637 source:c:\users\vinis\onedrive\documentos\escola\etec\tpa\28 exercícios\ex25\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

@@ -1,0 +1,570 @@
+#include <stdio.h>
+#include <locale.h>
+
+void exibirDados(char linguagem) {
+    int option, voltar;
+    
+    char python[] = "Python";
+    char pySobre[] = "O Python é uma linguagem de programação amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML). Os desenvolvedores usam o Python porque é eficiente e fácil de aprender e pode ser executada em muitas plataformas diferentes.";
+    char pyDificuldade[] = "1 de 5 estrelas";
+    char pyPopularidade[] = "4.5 de 5 estrelas";
+    char pyUsado[] = "Youtube, Instagram e Spotify";
+    char pySalario[] = "$104,000 ao ano";
+    
+    char java[] = "Java";
+    char javaSobre[] = "Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems, que em 2008 foi adquirido pela empresa Oracle Corporation.";
+    char javaDificuldade[] = "3 de 5 estrelas";
+    char javaPopularidade[] = "5 de 5 estrelas";
+    char javaUsado[] = "Gmail, Minecraft, maioria dos aplicativos Android e aplicativos de empresas";
+    char javaSalario[] = "$102,000 ao ano";
+    
+    char c[] = "C";
+    char cSobre[] = "C é uma linguagem de programação compilada de propósito geral, estruturada, imperativa, procedural, padronizada pela Organização Internacional para Padronização, criada em 1972 por Dennis Ritchie na empresa AT&T Bell Labs para desenvolvimento do sistema operacional Unix.";
+    char cDificuldade[] = "3 de 5 estrelas";
+    char cPopularidade[] = "5 de 5 estrelas";
+    char cUsado[] = "Sistemas Operacionais e Hardware";
+    char cSalario[] = "$102,000 ao ano";
+    
+    char cmais[] = "C++";
+    char cmaisSobre[] = "C++ é uma linguagem de programação compilada multi-paradigma e de uso geral. Desde os anos 1990 é uma das linguagens comerciais mais populares, sendo bastante usada também na academia por seu grande desempenho e base de utilizadores.";
+    char cmaisDificuldade[] = "4 de 5 estrelas";
+    char cmaisPopularidade[] = "4.5 de 5 estrelas";
+    char cmaisUsado[] = "Sistemas Operacionais, Hardware e navegadores";
+    char cmaisSalario[] = "$104,000 ao ano";
+    
+    char javascript[] = "JavaScript";
+    char jsSobre[] = "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.";
+    char jsDificuldade[] = "2 de 5 estrelas";
+    char jsPopularidade[] = "4 de 5 estrelas";
+    char jsUsado[] = "Paypal, fornt-end na maioria dos websites";
+    char jsSalario[] = "$99,000 ao ano";
+    
+    char csharp[] = "C#";
+    char csharpSobre[] = "C# é uma linguagem de programação, multiparadigma, de tipagem forte, desenvolvida pela Microsoft como parte da plataforma .NET. A sua sintaxe orientada a objetos foi baseada no C++ mas inclui muitas influências de outras linguagens de programação, como Object Pascal e, principalmente, Java.";
+    char csharpDificuldade[] = "3 de 5 estrelas";
+    char csharpPopularidade[] = "4.5 de 5 estrelas";
+    char csharpUsado[] = "Empresas e aplicações do Windows";
+    char csharpSalario[] = "$94,000 ao ano";
+    
+    char ruby[] = "Ruby";
+    char rubySobre[] = "Ruby é uma linguagem de programação interpretada multiparadigma, de tipagem dinâmica e forte, com gerenciamento de memória automático, originalmente planejada e desenvolvida no Japão em 1995, por Yukihiro 'Matz' Matsumoto, para ser usada como linguagem de script.";
+    char rubyDificuldade[] = "2 de 5 estrelas";
+    char rubyPopularidade[] = "3.5 de 5 estrelas";
+    char rubyUsado[] = "Hulu, Groupon e Slideshare";
+    char rubySalario[] = "$107,000 ao ano";
+    
+    char php[] = "PHP";
+    char phpSobre[] = "PHP é uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicações presentes e atuantes no lado do servidor, capazes de gerar conteúdo dinâmico na World Wide Web.";
+    char phpDificuldade[] = "2 de 5 estrelas";
+    char phpPopularidade[] = "4 de 5 estrelas";
+    char phpUsado[] = "Wordpress, Wikipedia e Flickr";
+    char phpSalario[] = "$89,000 ao ano";
+    
+    char objectivec[] = "Objective-C";
+    char objcSobre[] = "Objective-C, denominado frequentemente de ObjC ou mais raramente de Objective C ou Obj-C, é uma linguagem de programação reflexiva orientada a objecto que adiciona transmissão de mensagens no estilo Smalltalk para o C.";
+    char objcDificuldade[] = "3 de 5 estrelas";
+    char objcPopularidade[] = "3 de 5 estrelas";
+    char objcUsado[] = "Maioria dos aplicativos iOS e boa parte do Mac OS X";
+    char objcSalario[] = "$107,000 ao ano";
+    
+    
+
+    if (strcmp(linguagem, python) == 0)
+    {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'Python'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", pySobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", pyDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", pyPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", pyUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", pySalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, java) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'Java'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", javaSobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", javaDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", javaPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", javaUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", javaSalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, c) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'C'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", cSobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", cDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", cPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", cUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", cSalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, cmais) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'C++'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", cmaisSobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", cmaisDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", cmaisPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", cmaisUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", cmaisSalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, javascript) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'JavaScript'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", jsSobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", jsDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", jsPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", jsUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", jsSalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, csharp) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'C#'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", csharpSobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", csharpDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", csharpPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", csharpUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", csharpSalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, ruby) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'Python'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", rubySobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", rubyDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", rubyPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", rubyUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", rubySalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, php) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'PHP'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", phpSobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", phpDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", phpPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", phpUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", phpSalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else if (strcmp(linguagem, objectivec) == 0) {
+        do
+        {
+            system("clear");
+            printf("A linguagem ideal para você é 'Objective-C'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            printf("[6] SAIR\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", objcSobre);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", objcDificuldade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", objcPopularidade);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", objcUsado);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", objcSalario);
+                    printf("\n\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 6:
+                    exit(0);
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else {
+        printf("[ERRO]");
+        printf("Não foi possível selecionar a linguagem mais apropriada pra você. Por favor recomece o teste!");
+    }
+    
+    return;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int p1;
+    
+    do
+    {
+        printf("Olá, seja bem vindo a um guia de linguagens de programação! \nSe você ainda não é um programador e não sabe qual das diversas linguagens escolher, este teste é para você!\n\n\n");
+        printf("Vamos começar com as perguntas:\n\nPorque você quer aprender programação?\n");
+        printf(" [1] Para me divertir\n");
+        printf(" [2] Para ganhar dinheiro\n");
+        printf(" [3] Estou apenas interessado\n");
+        printf(" [4] Para aperfeiçoar a mim mesmo\n");
+        scanf("%d", &p1);
+        
+        switch(p1)
+        {
+            case 1:
+            case 3:
+            case 4:
+                printf("ta, pera ");
+                break;
+            case 2:
+                int pMeio;
+                printf("\nPor qual meio?\n");
+                printf(" [1] Através de um emprego\n");
+                printf(" [2] Tenho uma ideia de startup\n");
+                scanf("%d", &pMeio);
+                switch(pMeio)
+                {
+                    case 1:
+                        int pPlataf;
+                        printf("\nPara qual plataforma/setor?\n");
+                        printf(" [1] Games\n");
+                        printf(" [2] Mobile\n");
+                        printf(" [3] Web\n");
+                        printf(" [4] Grandes empresas de tecnologia\n");
+                        scanf("%d", &pPlataf);
+                        switch (pPlataf)
+                        {
+                            case  1:
+                                char linguagem = "Ruby";
+                                exibirDados(linguagem);
+                                break;
+                            case 2:
+                                int pSist;
+                                printf("\nQual Sistema Operacional?\n");
+                                printf(" [1] iOS\n");
+                                printf(" [2] Android\n");
+                                scanf("%d", &pSist);
+                                switch (pSist) {
+                                    case 1:
+                                        break;
+                                }
+                        }
+                        break;
+                }
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n\n\n");
+        }
+    } while(p1);
+    
+    return 0;
+}
+
+

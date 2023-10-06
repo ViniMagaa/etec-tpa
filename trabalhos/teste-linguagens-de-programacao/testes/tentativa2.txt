@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() {
+    int option, voltar;
+    char python[5][500] = {"O Python é uma linguagem de programação amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML). Os desenvolvedores usam o Python porque é eficiente e fácil de aprender e pode ser executada em muitas plataformas diferentes.", "1 de 5 estrelas",  "4.5 de 5 estrelas", "Youtube, Instagram e Spotify", "$104,000 ao ano"};
+    
+    do
+    {
+        system("clear");
+        system("cls");
+        printf("A linguagem ideal para você é 'Python'! Escolha alguma opção para saber mais sobre ela:\n");
+        printf("[1] Sobre\n");
+        printf("[2] Dificuldade\n");
+        printf("[3] Popularidade\n");
+        printf("[4] Usado em...\n");
+        printf("[5] Salário médio de um programador da área\n");
+        scanf("%d", &option);
+        switch (option)
+        {
+            case 1:
+                printf("\n[SOBRE]\n %s", python[0]);
+                printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 2:
+                printf("\n[DIFICULDADE]\n %s", python[1]);
+                printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 3:
+                printf("\n[POPULARIDADE]\n %s", python[2]);
+                printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 4:
+                printf("\n[USADO EM...]\n %s", python[3]);
+                printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            case 5:
+                printf("\n[SALÁRIO MÉDIO]\n %s", python[4]);
+                printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                scanf("%d", &voltar);
+                break;
+            default:
+                printf("\n[ERRO]");
+                printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                scanf("%d", &voltar);
+        }
+    } while (voltar == 1);
+    
+    return 0;
+}

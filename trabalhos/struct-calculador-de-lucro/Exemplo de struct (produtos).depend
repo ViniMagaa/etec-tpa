@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1695407199 source:c:\users\vinis\onedrive\documentos\escola\etec\técnicas de programação e algorítmos\exemplo de struct (produtos)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

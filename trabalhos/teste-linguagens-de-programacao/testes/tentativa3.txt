@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <locale.h>
+
+
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int p1;
+    
+    do
+    {
+        printf("Olá, seja bem vindo a um guia de linguagens de programação! \nSe você ainda não é um programador e não sabe qual das diversas linguagens escolher, este teste é para você!\n\n\n");
+        printf("Vamos começar com as perguntas:\n\nPorque você quer aprender programação?\n [1] Para me divertir\n [2] Para ganhar dinheiro\n [3] Estou apenas interessado\n [4] Para aperfeiçoar a mim mesmo\n");
+        scanf("%d", &p1);
+        
+        switch(p1)
+        {
+            case 1:
+            case 3:
+            case 4:
+                printf("ta, pera ");
+                break;
+            case 2:
+                int pMeio;
+                printf("\nPor qual meio?\n [1] Através de um emprego\n [2] Tenho uma ideia de startup\n");
+                scanf("%d", &pMeio);
+                switch(pMeio)
+                {
+                    case 1:
+                        int pPlataf;
+                        printf("\nPara qual plataforma/setor?\n [1] Games\n [2] Mobile\n [3] Web\n [4] Grandes empresas de tecnologia\n");
+                        scanf("%d", &pPlataf);
+                        switch (pPlataf)
+                        {
+                            case  1:
+                                char linguagem[] = "Python";
+                                exibirDados(linguagem);
+                                break;
+                        }
+                        break;
+                }
+                break;
+            default:
+                printf("Opcao inválida! Tente novamente.\n\n\n");
+        }
+    } while(p1);
+    
+    return 0;
+}
+
+void exibirDados(char linguagem) {
+    int option, voltar;
+    
+    char python[] = "Python";
+    char pySobre[] = "O Python é uma linguagem de programação amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML). Os desenvolvedores usam o Python porque é eficiente e fácil de aprender e pode ser executada em muitas plataformas diferentes.";
+    char pyDificuldade[] = "1 de 5 estrelas";
+    char pyPopularidade[] = "4.5 de 5 estrelas";
+    char pyUsado[] = "Youtube, Instagram e Spotify";
+    char pySalario[] = "$104,000 ao ano";
+    
+
+    if (linguagem = python)
+    {
+        do
+        {
+            system("clear");
+            system("cls");
+            printf("A linguagem ideal para você é 'Python'! Escolha alguma opção para saber mais sobre ela:\n");
+            printf("[1] Sobre\n");
+            printf("[2] Dificuldade\n");
+            printf("[3] Popularidade\n");
+            printf("[4] Usado em...\n");
+            printf("[5] Salário médio de um programador da área\n");
+            scanf("%d", &option);
+            switch (option)
+            {
+                case 1:
+                    printf("\n[SOBRE]\n %s", pySobre);
+                    printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 2:
+                    printf("\n[DIFICULDADE]\n %s", pyDificuldade);
+                    printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 3:
+                    printf("\n[POPULARIDADE]\n %s", pyPopularidade);
+                    printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 4:
+                    printf("\n[USADO EM...]\n %s", pyUsado);
+                    printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                case 5:
+                    printf("\n[SALÁRIO MÉDIO]\n %s", pySalario);
+                    printf("\n(Digite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação)\n");
+                    scanf("%d", &voltar);
+                    break;
+                default:
+                    printf("\n[ERRO]");
+                    printf("\nDigite '1' para voltar ao menu ou digite qualquer tecla para encerrar a navegação.\n");
+                    scanf("%d", &voltar);
+            }
+        } while (voltar == 1);
+    } else {
+        printf("fim");
+    }
+    
+    return;
+}

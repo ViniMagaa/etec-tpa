@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1694688012 source:c:\users\vinis\onedrive\Área de trabalho\vetor0\main.c
+	<stdio.h>
+	<string.h>
+	<locale.h>
+	<time.h>
+
