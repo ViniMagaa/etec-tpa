@@ -1,0 +1,11 @@
+Olá, Mundo!
+
+Esse é meu arquivo legal
+
+
+
+Eu estou escrevendo isso para testar a leitura de um arquivo de texto na linguagem C!
+
+
+
+ASS: Vinícius
