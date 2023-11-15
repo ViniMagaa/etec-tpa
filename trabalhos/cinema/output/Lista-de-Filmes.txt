@@ -1,0 +1,18 @@
+Filme 1:
+ Título: Cidade de Deus 
+ Sinopse: A trajetória de dois amigos que crescem em uma favela do Rio de Janeiro e seguem caminhos distintos na vida do crime. 
+ Duração: 2h10m12 
+ Classificação: 9/10 
+
+Filme 2:
+ Título: Central do Brasil 
+ Sinopse: Uma história emocionante sobre a amizade entre uma mulher idosa e um menino órfão em uma viagem pelo interior do Brasil. 
+ Duração: 1h53m10 
+ Classificação: 8/10 
+
+Filme 3:
+ Título: Tropa de Elite 
+ Sinopse: Um capitão do BOPE enfrenta desafios éticos e morais ao tentar combater a criminalidade no Rio de Janeiro. 
+ Duração: 1h55m47 
+ Classificação: 8/10 
+
