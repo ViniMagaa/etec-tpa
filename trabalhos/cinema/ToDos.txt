@@ -1,0 +1,17 @@
+CinemaC
+
+- numeros na lateral
+- cores
+- tela na parte de baixo
+- mensagem final
+	- assentos q pessoa escolheu
+	- filmes q a pessoa escolheu
+	- "bom filme"
+- mais filmes variados
+	- sherek 5
+	- jogos vorazes
+	- homem de ferro
+	- jogos mortais
+	- ratatouile
+	- toy story 5
+	- homem aranha 
