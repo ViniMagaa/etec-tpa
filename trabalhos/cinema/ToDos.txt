@@ -1,8 +1,7 @@
 CinemaC
 
-- numeros na lateral
 - cores
-- tela na parte de baixo
+- adicionar verificação quando usuario seleciona um assento
 - mensagem final
 	- assentos q pessoa escolheu
 	- filmes q a pessoa escolheu

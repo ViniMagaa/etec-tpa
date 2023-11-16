@@ -25,7 +25,8 @@ Movie movies[MOVIES_LENGTH];
 void clearBuffer()
 {
   int c;
-  while ((c = getchar()) != '\n' && c != EOF);
+  while ((c = getchar()) != '\n' && c != EOF)
+    ;
 }
 
 // Exibe uma mensagem de 'Erro: opção inválida' e aguarda um caractere
@@ -111,7 +112,7 @@ void writeSeats(int isFirstTime)
       {
         for (int j = 0; j < MAX_SEAT_COLS; j++)
         {
-          if (isFirstTime == 1) // Caso seja a primeira vez
+          if (isFirstTime == 1)                 // Caso seja a primeira vez
             movies[movieIndex].seats[i][j] = 0; // Inicia todos os assentos em 0
           fprintf(file, "%d ", movies[movieIndex].seats[i][j]);
         }
@@ -177,9 +178,48 @@ void showSeats(int index)
       char seat = (movies[index].seats[row][col] == 0) ? ' ' : 'X';
       printf("[%c]", seat);
     }
+    printf(" %d", row);
     printf("\n");
   }
-  printf("\n");
+  // Exibe a tela do filme
+  int screenSize = MAX_SEAT_COLS * 3 + 4; // Cálculo para pegar toda a área
+  for (int i = 0; i < 2; i++) // Duas linhas de exibição
+  {
+    switch (i)
+    {
+    case 0:
+      for (int j = 0; j < screenSize; j++)
+      {
+        printf("_");
+      }
+      break;
+
+    case 1:
+      for (int j = 0; j < screenSize - 3; j++) // Menos o tamanho dos caracteres que sobram de 'Tela'
+      {
+        if (j == 0)
+        {
+          printf("\n\\");
+        }
+        else if (j > 0 && j < screenSize - 4)
+        {
+          if (j == (screenSize - 4) / 2) // Calcula a metade para escrever a palavra no centro
+          {
+            printf("Tela");
+          }
+          else
+          {
+            printf(" ");
+          }
+        }
+        else
+        {
+          printf("/\n\n");
+        }
+      }
+      break;
+    }
+  }
 }
 
 // Lê e processa o(s) assento(s) escolhidos pelo usuário
@@ -285,7 +325,7 @@ int main()
       }
     } while (option < 1 || option > MOVIES_LENGTH);
 
-    showMovieInformation(option-1);
+    showMovieInformation(option - 1);
 
     printf("Continuar?\n");
     printf(" [1] Sim, vou assistir esse filme\n");
