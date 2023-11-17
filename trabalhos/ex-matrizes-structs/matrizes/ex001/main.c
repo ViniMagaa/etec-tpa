@@ -21,7 +21,7 @@ int main()
 
     int matriz[n][n];
 
-    /// Ler os valores de cada posição da matriz
+    /// Ler os valores de cada posiï¿½ï¿½o da matriz
     for(int i = 0; i < n; i++)
     {
         for(int j = 0; j < n; j++)

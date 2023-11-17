@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1699747730 source:c:\users\vinis\onedrive\documentos\programação\github\etec-tpa\trabalhos\ex-vetores-structs\struct\ex001\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

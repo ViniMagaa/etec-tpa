@@ -6,10 +6,13 @@ CinemaC
 	- assentos q pessoa escolheu
 	- filmes q a pessoa escolheu
 - mais filmes variados
-	- sherek 5
+	- sherek
 	- jogos vorazes
 	- homem de ferro
 	- jogos mortais
 	- ratatouile
-	- toy story 5
+	- toy story 4
 	- homem aranha 
+	- divertidamente
+	- deadpool
+	- vingadores
