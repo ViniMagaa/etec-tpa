@@ -20,7 +20,7 @@ typedef struct
 } Movie;
 
 Movie movies[MOVIES_LENGTH];
-// TODO: Criar vari√°vel para armazenar os assentos do usu√°rio
+// TODO: Criar vari·vel para armazenar os assentos do usu·rio
 
 // Limpa o buffer do teclado
 void clearBuffer()
@@ -30,30 +30,30 @@ void clearBuffer()
     ;
 }
 
-// Exibe uma mensagem de 'Erro: op√ß√£o inv√°lida' e aguarda um caractere
+// Exibe uma mensagem de 'Erro: opÁ„o inv·lida' e aguarda um caractere
 void invalidOption()
 {
-  printf("\nOp√ß√£o inv√°lida! Tente novamente.\n");
+  printf("\nOpÁ„o inv·lida! Tente novamente.\n");
   getch();
   system("cls");
 }
 
-// Escreve os filmes com suas informa√ß√µes no arquivo 'Lista-de-Filmes.txt'
+// Escreve os filmes com suas informaÁıes no arquivo 'Lista-de-Filmes.txt'
 void writeMovies()
 {
   // Definir os filmes
   strcpy(movies[0].title, "Cidade de Deus");
-  strcpy(movies[0].synopsis, "A trajet√≥ria de dois amigos que crescem em uma favela do Rio de Janeiro e seguem caminhos distintos na vida do crime.");
+  strcpy(movies[0].synopsis, "A trajetÛria de dois amigos que crescem em uma favela do Rio de Janeiro e seguem caminhos distintos na vida do crime.");
   strcpy(movies[0].duration, "2h10m");
   movies[0].rating = 9;
 
   strcpy(movies[1].title, "Central do Brasil");
-  strcpy(movies[1].synopsis, "Uma hist√≥ria emocionante sobre a amizade entre uma mulher idosa e um menino √≥rf√£o em uma viagem pelo interior do Brasil.");
+  strcpy(movies[1].synopsis, "Uma histÛria emocionante sobre a amizade entre uma mulher idosa e um menino Ûrf„o em uma viagem pelo interior do Brasil.");
   strcpy(movies[1].duration, "1h53m");
   movies[1].rating = 8;
 
   strcpy(movies[2].title, "Tropa de Elite");
-  strcpy(movies[2].synopsis, "Um capit√£o do BOPE enfrenta desafios √©ticos e morais ao tentar combater a criminalidade no Rio de Janeiro.");
+  strcpy(movies[2].synopsis, "Um capit„o do BOPE enfrenta desafios Èticos e morais ao tentar combater a criminalidade no Rio de Janeiro.");
   strcpy(movies[2].duration, "1h55m");
   movies[2].rating = 8;
 
@@ -65,22 +65,22 @@ void writeMovies()
     for (int i = 0; i < MOVIES_LENGTH; i++)
     {
       fprintf(file, "Filme %d:\n", i + 1);
-      fprintf(file, " T√≠tulo: %s \n", movies[i].title);
+      fprintf(file, " TÌtulo: %s \n", movies[i].title);
       fprintf(file, " Sinopse: %s \n", movies[i].synopsis);
-      fprintf(file, " Dura√ß√£o: %s \n", movies[i].duration);
-      fprintf(file, " Classifica√ß√£o: %d/10 \n\n", movies[i].rating);
+      fprintf(file, " DuraÁ„o: %s \n", movies[i].duration);
+      fprintf(file, " ClassificaÁ„o: %d/10 \n\n", movies[i].rating);
       fprintf(file, " Sala do filme: %s\n ", movies[i].title);
       // Exibir indices das colunas A a J
       for (int i = 0; i < MAX_SEAT_COLS; i++)
       {
-        char c = (char)65 + i; // 65 √© o A na tabela ASCII
+        char c = (char)65 + i; // 65 È o A na tabela ASCII
         fprintf(file, "  %c", c);
       }
       fprintf(file, "\n");
 
       for (int row = 0; row < MAX_SEAT_ROWS; row++)
       {
-        // Escrever √≠ndices das linhas 0 a 9
+        // Escrever Ìndices das linhas 0 a 9
         fprintf(file, "%d ", row);
         for (int col = 0; col < MAX_SEAT_COLS; col++)
         {
@@ -128,7 +128,7 @@ void writeSeats(int isFirstTime)
     printf("Erro ao abrir\n");
 }
 
-// L√™ e armazena os assentos do arquivo 'Assentos.txt'
+// LÍ e armazena os assentos do arquivo 'Assentos.txt'
 void readSeats()
 {
   // Abrir arquivo no modo o 'read'
@@ -153,8 +153,8 @@ void readSeats()
   }
   else
   {
-    // Caso n√£o exista, ele chama a fun√ß√£o para escrever assentos
-    writeSeats(1); // Passa o par√¢metro 1 para a primeira vez
+    // Caso n„o exista, ele chama a funÁ„o para escrever assentos
+    writeSeats(1); // Passa o par‚metro 1 para a primeira vez
   }
 }
 
@@ -165,14 +165,14 @@ void showSeats(int index)
   // Exibir indices das colunas A a J
   for (int i = 0; i < MAX_SEAT_COLS; i++)
   {
-    char c = (char)65 + i; // 65 √© o A na tabela ASCII
+    char c = (char)65 + i; // 65 È o A na tabela ASCII
     printf("  %c", c);
   }
   printf("\n");
 
   for (int row = 0; row < MAX_SEAT_ROWS; row++)
   {
-    // Exibir √≠ndices das linhas 0 a 9
+    // Exibir Ìndices das linhas 0 a 9
     printf("%d ", row);
     for (int col = 0; col < MAX_SEAT_COLS; col++)
     {
@@ -183,8 +183,8 @@ void showSeats(int index)
     printf("\n");
   }
   // Exibe a tela do filme
-  int screenSize = MAX_SEAT_COLS * 3 + 4; // C√°lculo para pegar toda a √°rea
-  for (int i = 0; i < 2; i++)             // Duas linhas de exibi√ß√£o
+  int screenSize = MAX_SEAT_COLS * 3 + 4; // C·lculo para pegar toda a ·rea
+  for (int i = 0; i < 2; i++)             // Duas linhas de exibiÁ„o
   {
     switch (i)
     {
@@ -223,7 +223,7 @@ void showSeats(int index)
   }
 }
 
-// L√™ e processa o(s) assento(s) escolhidos pelo usu√°rio
+// LÍ e processa o(s) assento(s) escolhidos pelo usu·rio
 void readSeat(int index)
 {
   int option;
@@ -241,12 +241,12 @@ void readSeat(int index)
 
       clearBuffer();
       scanf("%d%c", &row, &readCol);
-      col = (int)toupper(readCol); // Retorna o valor da letra mai√∫scula na tabela ASCII
+      col = (int)toupper(readCol); // Retorna o valor da letra mai˙scula na tabela ASCII
 
-      // Verifica se √© v√°lido
+      // Verifica se È v·lido
       if (row >= 0 && row < MAX_SEAT_ROWS && col >= 65 && col < (65 + MAX_SEAT_COLS))
       {
-        // Altera o assento na posi√ß√£o escolhida para 1
+        // Altera o assento na posiÁ„o escolhida para 1
         for (int i = 0; i < MAX_SEAT_ROWS; i++)
         {
           // Verificar linha
@@ -255,9 +255,9 @@ void readSeat(int index)
             // Verificar coluna
             for (int j = 0; j < MAX_SEAT_COLS; j++)
             {
-              if (65 + j == col) // 65 √© o 'A' na tabela ASCII
+              if (65 + j == col) // 65 È o 'A' na tabela ASCII
               {
-                // Verifica se j√° existe algu√©m no assento
+                // Verifica se j· existe alguÈm no assento
                 if (movies[index].seats[i][j] != 0)
                 {
                   invalidOption();
@@ -283,9 +283,9 @@ void readSeat(int index)
     {
       system("cls");
       showSeats(index);
-      printf("Voc√™ quer reservar mais um assento?\n");
+      printf("VocÍ quer reservar mais um assento?\n");
       printf(" [1] Sim, quero reservar mais pessoas\n");
-      printf(" [2] N√£o, eu n√£o vou adicionar\n");
+      printf(" [2] N„o, eu n„o vou adicionar\n");
       scanf("%d", &option);
 
       switch (option)
@@ -304,24 +304,24 @@ void readSeat(int index)
 
   } while (isContinue == 0);
 
-  // Depois de adicionar, os assentos s√£o salvos no arquivo de texto
-  writeSeats(0); // Par√¢metro 0 pois o arquivo j√° existe
+  // Depois de adicionar, os assentos s„o salvos no arquivo de texto
+  writeSeats(0); // Par‚metro 0 pois o arquivo j· existe
 }
 
-// Exibe as informa√ß√µes de um filme
+// Exibe as informaÁıes de um filme
 void showMovieInformation(int movieIndex)
 {
   printf("\nFilme selecionado:\n");
   printf(" Titulo: %s \n", movies[movieIndex].title);
   printf(" Sinopse: %s \n", movies[movieIndex].synopsis);
-  printf(" Dura√ß√£o: %s \n", movies[movieIndex].duration);
-  printf(" Classifica√ß√£o: %d/10 \n\n", movies[movieIndex].rating);
+  printf(" DuraÁ„o: %s \n", movies[movieIndex].duration);
+  printf(" ClassificaÁ„o: %d/10 \n\n", movies[movieIndex].rating);
   showSeats(movieIndex);
 }
 
 int main()
 {
-  // Permitir acentua√ß√£o
+  // Permitir acentuaÁ„o
   setlocale(LC_ALL, "Portuguese");
 
   readSeats();
@@ -351,7 +351,7 @@ int main()
 
     printf("Continuar?\n");
     printf(" [1] Sim, vou assistir esse filme\n");
-    printf(" [2] N√£o, eu quero assistir outro filme\n");
+    printf(" [2] N„o, eu quero assistir outro filme\n");
     scanf("%d", &option2);
 
     if (option2 < 1 || option2 > 2)
@@ -364,7 +364,7 @@ int main()
   readSeat(option - 1);
 
   printf("\nBom Filme!\n");
-  printf("Esperamos proporcionar a voc√™ uma experi√™ncia cinematogr√°fica incr√≠vel. Tenha uma √≥tima sess√£o!\n\n");
+  printf("Esperamos proporcionar a vocÍ uma experiÍncia cinematogr·fica incrÌvel. Tenha uma Ûtima sess„o!\n\n");
 
   return 0;
 }

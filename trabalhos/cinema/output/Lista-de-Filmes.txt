@@ -1,8 +1,8 @@
 Filme 1:
- T√≠tulo: Cidade de Deus 
- Sinopse: A trajet√≥ria de dois amigos que crescem em uma favela do Rio de Janeiro e seguem caminhos distintos na vida do crime. 
- Dura√ß√£o: 2h10m 
- Classifica√ß√£o: 9/10 
+ TÌtulo: Cidade de Deus 
+ Sinopse: A trajetÛria de dois amigos que crescem em uma favela do Rio de Janeiro e seguem caminhos distintos na vida do crime. 
+ DuraÁ„o: 2h10m 
+ ClassificaÁ„o: 9/10 
 
  Sala do filme: Cidade de Deus
    A  B  C  D  E  F  G  H  I  J
@@ -18,10 +18,10 @@ Filme 1:
 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 
 Filme 2:
- T√≠tulo: Central do Brasil 
- Sinopse: Uma hist√≥ria emocionante sobre a amizade entre uma mulher idosa e um menino √≥rf√£o em uma viagem pelo interior do Brasil. 
- Dura√ß√£o: 1h53m 
- Classifica√ß√£o: 8/10 
+ TÌtulo: Central do Brasil 
+ Sinopse: Uma histÛria emocionante sobre a amizade entre uma mulher idosa e um menino Ûrf„o em uma viagem pelo interior do Brasil. 
+ DuraÁ„o: 1h53m 
+ ClassificaÁ„o: 8/10 
 
  Sala do filme: Central do Brasil
    A  B  C  D  E  F  G  H  I  J
@@ -37,14 +37,14 @@ Filme 2:
 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 
 Filme 3:
- T√≠tulo: Tropa de Elite 
- Sinopse: Um capit√£o do BOPE enfrenta desafios √©ticos e morais ao tentar combater a criminalidade no Rio de Janeiro. 
- Dura√ß√£o: 1h55m 
- Classifica√ß√£o: 8/10 
+ TÌtulo: Tropa de Elite 
+ Sinopse: Um capit„o do BOPE enfrenta desafios Èticos e morais ao tentar combater a criminalidade no Rio de Janeiro. 
+ DuraÁ„o: 1h55m 
+ ClassificaÁ„o: 8/10 
 
  Sala do filme: Tropa de Elite
    A  B  C  D  E  F  G  H  I  J
-0 [ ][ ][ ][X][ ][ ][ ][ ][ ][ ]
+0 [ ][ ][ ][X][X][ ][ ][ ][ ][ ]
 1 [X][X][ ][ ][ ][ ][ ][ ][ ][ ]
 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
