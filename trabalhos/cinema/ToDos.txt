@@ -1,10 +1,5 @@
 CinemaC
 
-- cores
-- adicionar verificação quando usuario seleciona um assento
-- mensagem final
-	- assentos q pessoa escolheu
-	- filmes q a pessoa escolheu
 - mais filmes variados
 	- sherek
 	- jogos vorazes

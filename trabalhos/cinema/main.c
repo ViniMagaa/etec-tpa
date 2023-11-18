@@ -2,6 +2,7 @@
 #include <string.h>
 #include <conio.h>
 #include <locale.h>
+#include <ctype.h>
 
 #define LIST_MOVIES_FILE_NAME "Lista-de-Filmes.txt"
 #define SEATS_FILE_NAME "Assentos.txt"
@@ -9,6 +10,14 @@
 #define MOVIES_LENGTH 3
 #define MAX_SEAT_COLS 10
 #define MAX_SEAT_ROWS 10
+
+// Cores
+#define RED "\x1B[31m"
+#define GREEN "\x1B[32m"
+#define MAGENTA "\x1B[35m"
+#define CYAN "\x1B[36m"
+#define RESET "\x1B[0m"
+#define BOLD "\x1B[1m"
 
 typedef struct
 {
@@ -20,7 +29,8 @@ typedef struct
 } Movie;
 
 Movie movies[MOVIES_LENGTH];
-// TODO: Criar variável para armazenar os assentos do usuário
+int userSeats[MAX_SEAT_ROWS * MAX_SEAT_COLS][2];
+int userSeatsIndex = 0;
 
 // Limpa o buffer do teclado
 void clearBuffer()
@@ -28,14 +38,18 @@ void clearBuffer()
   int c;
   while ((c = getchar()) != '\n' && c != EOF)
     ;
+
+  return;
 }
 
 // Exibe uma mensagem de 'Erro: opção inválida' e aguarda um caractere
 void invalidOption()
 {
-  printf("\nOpção inválida! Tente novamente.\n");
+  printf(RED BOLD "\nOpção inválida! Tente novamente.\n(Pressione qualquer tecla para continuar)\n" RESET);
   getch();
   system("cls");
+
+  return;
 }
 
 // Escreve os filmes com suas informações no arquivo 'Lista-de-Filmes.txt'
@@ -97,6 +111,8 @@ void writeMovies()
   }
   else
     printf("Erro ao abrir\n");
+
+  return;
 }
 
 // Escreve os assentos de cada filme em cada linha do arquivo 'Assentos.txt'
@@ -126,6 +142,8 @@ void writeSeats(int isFirstTime)
   }
   else
     printf("Erro ao abrir\n");
+
+  return;
 }
 
 // Lê e armazena os assentos do arquivo 'Assentos.txt'
@@ -156,33 +174,13 @@ void readSeats()
     // Caso não exista, ele chama a função para escrever assentos
     writeSeats(1); // Passa o parâmetro 1 para a primeira vez
   }
+
+  return;
 }
 
-// Mostra os assentos de maneira formatada na tela
-void showSeats(int index)
+// Exibe a tela do filme
+void showMovieScreen()
 {
-  printf(" Sala do filme: %s\n ", movies[index].title);
-  // Exibir indices das colunas A a J
-  for (int i = 0; i < MAX_SEAT_COLS; i++)
-  {
-    char c = (char)65 + i; // 65 é o A na tabela ASCII
-    printf("  %c", c);
-  }
-  printf("\n");
-
-  for (int row = 0; row < MAX_SEAT_ROWS; row++)
-  {
-    // Exibir índices das linhas 0 a 9
-    printf("%d ", row);
-    for (int col = 0; col < MAX_SEAT_COLS; col++)
-    {
-      char seat = (movies[index].seats[row][col] == 0) ? ' ' : 'X';
-      printf("[%c]", seat);
-    }
-    printf(" %d", row);
-    printf("\n");
-  }
-  // Exibe a tela do filme
   int screenSize = MAX_SEAT_COLS * 3 + 4; // Cálculo para pegar toda a área
   for (int i = 0; i < 2; i++)             // Duas linhas de exibição
   {
@@ -221,6 +219,70 @@ void showSeats(int index)
       break;
     }
   }
+
+  return;
+}
+
+// Mostra os assentos de maneira formatada na tela
+void showSeats(int index)
+{
+  printf(CYAN "Sala do filme: %s\n " RESET, movies[index].title);
+  // Exibir indices das colunas A a J
+  for (int i = 0; i < MAX_SEAT_COLS; i++)
+  {
+    char c = (char)65 + i; // 65 é o A na tabela ASCII
+    printf(MAGENTA "  %c" RESET, c);
+  }
+  printf("\n");
+
+  for (int row = 0; row < MAX_SEAT_ROWS; row++)
+  {
+    // Exibir índices das linhas 0 a 9
+    printf(MAGENTA "%d " RESET, row);
+    for (int col = 0; col < MAX_SEAT_COLS; col++)
+    {
+      char seat = (movies[index].seats[row][col] == 0) ? ' ' : 'X';
+      // Se há alguma pessoa reservada
+      if (seat == 'X')
+      {
+        // Se não há assentos do usuário
+        if (userSeatsIndex == 0)
+        {
+          printf(RED "[%c]" RESET, seat);
+        }
+        else
+        {
+          int seatOccupied = 0;
+          for (int seatIndex = 0; seatIndex < userSeatsIndex; seatIndex++)
+          {
+            // Se os índices correspondem aos números da matriz 'userSeats'
+            if (userSeats[seatIndex][0] == row && userSeats[seatIndex][1] == col + 65) // 65 é o A na tabela ASCII
+            {
+              printf(GREEN "[%c]" RESET, seat);
+              seatOccupied = 1;
+              break;
+            }
+          }
+          if (seatOccupied == 0)
+          {
+            printf(RED "[%c]" RESET, seat);
+          }
+        }
+      }
+      else
+      {
+        // Se não há ninguém
+        printf("[%c]", seat);
+      }
+    }
+    // Ao final de cada linha exibe os números dela
+    printf(MAGENTA " %d" RESET, row);
+    printf("\n");
+  }
+  // Exibe a tela do filme
+  showMovieScreen();
+
+  return;
 }
 
 // Lê e processa o(s) assento(s) escolhidos pelo usuário
@@ -237,7 +299,7 @@ void readSeat(int index)
     {
       system("cls");
       showSeats(index);
-      printf("Selecione seu assento (Linha + Coluna. EX: 1A)\n");
+      printf(CYAN "Selecione seu assento (Linha + Coluna. EX: 1A)\n" RESET);
 
       clearBuffer();
       scanf("%d%c", &row, &readCol);
@@ -264,6 +326,9 @@ void readSeat(int index)
                 }
                 else
                 {
+                  userSeats[userSeatsIndex][0] = row;
+                  userSeats[userSeatsIndex][1] = col;
+                  userSeatsIndex++;
                   movies[index].seats[i][j] = 1;
                   isCorrect = 1;
                 }
@@ -283,7 +348,7 @@ void readSeat(int index)
     {
       system("cls");
       showSeats(index);
-      printf("Você quer reservar mais um assento?\n");
+      printf(CYAN "Você quer reservar mais um assento?\n" RESET);
       printf(" [1] Sim, quero reservar mais pessoas\n");
       printf(" [2] Não, eu não vou adicionar\n");
       scanf("%d", &option);
@@ -306,17 +371,38 @@ void readSeat(int index)
 
   // Depois de adicionar, os assentos são salvos no arquivo de texto
   writeSeats(0); // Parâmetro 0 pois o arquivo já existe
+
+  return;
 }
 
 // Exibe as informações de um filme
 void showMovieInformation(int movieIndex)
 {
-  printf("\nFilme selecionado:\n");
+  printf(CYAN "\nFilme selecionado:\n" RESET);
   printf(" Titulo: %s \n", movies[movieIndex].title);
   printf(" Sinopse: %s \n", movies[movieIndex].synopsis);
   printf(" Duração: %s \n", movies[movieIndex].duration);
   printf(" Classificação: %d/10 \n\n", movies[movieIndex].rating);
   showSeats(movieIndex);
+}
+
+// Exibe uma mensagem desejando um bom filme juntamente algumas informações
+void goodBye(int movieIndex)
+{
+  system("cls");
+  printf(MAGENTA BOLD "\nBom Filme!\n" RESET);
+  printf("Esperamos proporcionar a você uma experiência cinematográfica incrível.\n");
+
+  showMovieInformation(movieIndex);
+  printf(CYAN "\nSeus assentos:\n" RESET);
+  for (int i = 0; i < userSeatsIndex; i++)
+  {
+    printf(" - %d%c\n", userSeats[i][0], (char)userSeats[i][1]);
+  }
+
+  printf(MAGENTA BOLD "\nTenha uma ótima sessão!\n\n" RESET);
+
+  return;
 }
 
 int main()
@@ -329,7 +415,13 @@ int main()
 
   int option, option2;
 
-  printf("BEM VINDO AO CINEMA!\n");
+  // "CinemaC"
+  printf(MAGENTA BOLD " ,-----.,--.                                  ,-----. \n");
+  printf("'  .--./`--',--,--,  ,---. ,--,--,--. ,--,--.'  .--./ \n");
+  printf("|  |    ,--.|      \\| .-. :|        |' ,-.  ||  |     \n");
+  printf("'  '--'\\|  ||  ||  |\\   --.|  |  |  |\\ '-'  |'  '--'\\ \n");
+  printf(" `-----'`--'`--''--' `----'`--`--`--' `--`--' `-----' \n\n");
+  printf(CYAN "Bem Vindo ao CinemaC!\n" RESET);
   do
   {
     do
@@ -363,8 +455,7 @@ int main()
 
   readSeat(option - 1);
 
-  printf("\nBom Filme!\n");
-  printf("Esperamos proporcionar a você uma experiência cinematográfica incrível. Tenha uma ótima sessão!\n\n");
+  goodBye(option - 1);
 
   return 0;
 }
