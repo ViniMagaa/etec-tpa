@@ -7,7 +7,7 @@
 #define LIST_MOVIES_FILE_NAME "Lista-de-Filmes.txt"
 #define SEATS_FILE_NAME "Assentos.txt"
 
-#define MOVIES_LENGTH 3
+#define MOVIES_LENGTH 10
 #define MAX_SEAT_COLS 10
 #define MAX_SEAT_ROWS 10
 
@@ -24,7 +24,7 @@ typedef struct
   char title[50];
   char synopsis[200];
   char duration[5];
-  int rating;
+  double rating;
   int seats[MAX_SEAT_ROWS][MAX_SEAT_COLS];
 } Movie;
 
@@ -36,13 +36,12 @@ int userSeatsIndex = 0;
 void clearBuffer()
 {
   int c;
-  while ((c = getchar()) != '\n' && c != EOF)
-    ;
+  while ((c = getchar()) != '\n' && c != EOF);
 
   return;
 }
 
-// Exibe uma mensagem de 'Erro: opção inválida' e aguarda um caractere
+// Exibe uma mensagem de erro e aguarda um caractere
 void invalidOption()
 {
   printf(RED BOLD "\nOpção inválida! Tente novamente.\n(Pressione qualquer tecla para continuar)\n" RESET);
@@ -55,21 +54,56 @@ void invalidOption()
 // Escreve os filmes com suas informações no arquivo 'Lista-de-Filmes.txt'
 void writeMovies()
 {
-  // Definir os filmes
-  strcpy(movies[0].title, "Cidade de Deus");
-  strcpy(movies[0].synopsis, "A trajetória de dois amigos que crescem em uma favela do Rio de Janeiro e seguem caminhos distintos na vida do crime.");
-  strcpy(movies[0].duration, "2h10m");
-  movies[0].rating = 9;
+  // Definindo os filmes
+  strcpy(movies[0].title, "Shrek");
+  strcpy(movies[0].synopsis, "Animação sobre um ogro que embarca em uma jornada para resgatar uma princesa e descobre o verdadeiro significado da amizade.");
+  strcpy(movies[0].duration, "1h35m");
+  movies[0].rating = 4.5;
 
-  strcpy(movies[1].title, "Central do Brasil");
-  strcpy(movies[1].synopsis, "Uma história emocionante sobre a amizade entre uma mulher idosa e um menino órfão em uma viagem pelo interior do Brasil.");
-  strcpy(movies[1].duration, "1h53m");
-  movies[1].rating = 8;
+  strcpy(movies[1].title, "Jogos Vorazes");
+  strcpy(movies[1].synopsis, "Num futuro distópico, jovens são selecionados para lutar até a morte em um reality show transmitido para toda a nação.");
+  strcpy(movies[1].duration, "2h22m");
+  movies[1].rating = 3.5;
 
-  strcpy(movies[2].title, "Tropa de Elite");
-  strcpy(movies[2].synopsis, "Um capitão do BOPE enfrenta desafios éticos e morais ao tentar combater a criminalidade no Rio de Janeiro.");
-  strcpy(movies[2].duration, "1h55m");
-  movies[2].rating = 8;
+  strcpy(movies[2].title, "Homem de Ferro");
+  strcpy(movies[2].synopsis, "Tony Stark, um industrialista bilionário, constrói uma armadura tecnológica para combater o mal como Homem de Ferro.");
+  strcpy(movies[2].duration, "2h6m");
+  movies[2].rating = 4.0;
+
+  strcpy(movies[3].title, "Jogos Mortais");
+  strcpy(movies[3].synopsis, "Um psicopata coloca suas vítimas em jogos mortais elaborados que testam sua capacidade de sobrevivência.");
+  strcpy(movies[3].duration, "1h43m");
+  movies[3].rating = 3.0;
+
+  strcpy(movies[4].title, "Ratatouille");
+  strcpy(movies[4].synopsis, "Um rato chamado Remy sonha em se tornar um grande chef e forma uma parceria incomum com Linguini, um jovem cozinheiro.");
+  strcpy(movies[4].duration, "1h51m");
+  movies[4].rating = 4.5;
+
+  strcpy(movies[5].title, "Toy Story 4");
+  strcpy(movies[5].synopsis, "Os brinquedos de Woody embarcam em uma aventura para salvar Forky, um brinquedo feito à mão, que não quer ser um brinquedo.");
+  strcpy(movies[5].duration, "1h40m");
+  movies[5].rating = 4.0;
+
+  strcpy(movies[6].title, "Homem-Aranha");
+  strcpy(movies[6].synopsis, "O adolescente Peter Parker adquire habilidades de aranha e assume a responsabilidade de proteger Nova York como o Homem-Aranha.");
+  strcpy(movies[6].duration, "2h13m");
+  movies[6].rating = 4.2;
+
+  strcpy(movies[7].title, "Divertidamente");
+  strcpy(movies[7].synopsis, "As emoções dentro da mente de uma jovem chamada Riley ajudam-na a lidar com as mudanças em sua vida.");
+  strcpy(movies[7].duration, "1h35m");
+  movies[7].rating = 4.4;
+
+  strcpy(movies[8].title, "Deadpool");
+  strcpy(movies[8].synopsis, "Um ex-militar com poderes regenerativos assume a identidade de Deadpool e busca vingança contra seus algozes.");
+  strcpy(movies[8].duration, "1h49m");
+  movies[8].rating = 4.8;
+
+  strcpy(movies[9].title, "Vingadores");
+  strcpy(movies[9].synopsis, "Os super-heróis da Marvel se reúnem para enfrentar uma ameaça intergaláctica liderada por Thanos.");
+  strcpy(movies[9].duration, "2h29m");
+  movies[9].rating = 4.7;
 
   // Abrir arquivo no modo o 'write'
   FILE *file = fopen(LIST_MOVIES_FILE_NAME, "wt");
@@ -82,7 +116,7 @@ void writeMovies()
       fprintf(file, " Título: %s \n", movies[i].title);
       fprintf(file, " Sinopse: %s \n", movies[i].synopsis);
       fprintf(file, " Duração: %s \n", movies[i].duration);
-      fprintf(file, " Classificação: %d/10 \n\n", movies[i].rating);
+      fprintf(file, " Classificação: %.1lf/5 \n\n", movies[i].rating);
       fprintf(file, " Sala do filme: %s\n ", movies[i].title);
       // Exibir indices das colunas A a J
       for (int i = 0; i < MAX_SEAT_COLS; i++)
@@ -226,7 +260,7 @@ void showMovieScreen()
 // Mostra os assentos de maneira formatada na tela
 void showSeats(int index)
 {
-  printf(CYAN "Sala do filme: %s\n " RESET, movies[index].title);
+  printf(CYAN "Sala do filme: %s\n\n " RESET, movies[index].title);
   // Exibir indices das colunas A a J
   for (int i = 0; i < MAX_SEAT_COLS; i++)
   {
@@ -382,7 +416,7 @@ void showMovieInformation(int movieIndex)
   printf(" Titulo: %s \n", movies[movieIndex].title);
   printf(" Sinopse: %s \n", movies[movieIndex].synopsis);
   printf(" Duração: %s \n", movies[movieIndex].duration);
-  printf(" Classificação: %d/10 \n\n", movies[movieIndex].rating);
+  printf(" Classificação: %.1lf/5 \n\n", movies[movieIndex].rating);
   showSeats(movieIndex);
 }
 
@@ -394,13 +428,14 @@ void goodBye(int movieIndex)
   printf("Esperamos proporcionar a você uma experiência cinematográfica incrível.\n");
 
   showMovieInformation(movieIndex);
-  printf(CYAN "\nSeus assentos:\n" RESET);
+  printf(CYAN "\nSeu(s) assento(s):\n" RESET);
   for (int i = 0; i < userSeatsIndex; i++)
   {
     printf(" - %d%c\n", userSeats[i][0], (char)userSeats[i][1]);
   }
 
-  printf(MAGENTA BOLD "\nTenha uma ótima sessão!\n\n" RESET);
+  printf(MAGENTA BOLD "Tenha uma ótima sessão!\n" RESET);
+  printf("OBS: Para maiores informações sobre os filmes, acesse o arquivo '%s'\n\n", LIST_MOVIES_FILE_NAME);
 
   return;
 }

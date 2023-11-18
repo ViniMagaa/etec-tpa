@@ -1,32 +1,32 @@
 Filme 1:
- Título: Cidade de Deus 
- Sinopse: A trajetória de dois amigos que crescem em uma favela do Rio de Janeiro e seguem caminhos distintos na vida do crime. 
- Duração: 2h10m 
- Classificação: 9/10 
+ Título: Shrek 
+ Sinopse: Animação sobre um ogro que embarca em uma jornada para resgatar uma princesa e descobre o verdadeiro significado da amizade. 
+ Duração: 1h35m 
+ Classificação: 4,5/5 
 
- Sala do filme: Cidade de Deus
+ Sala do filme: Shrek
    A  B  C  D  E  F  G  H  I  J
-0 [X][X][X][X][X][X][ ][ ][ ][ ]
-1 [X][X][X][X][X][X][X][X][ ][ ]
-2 [X][X][ ][ ][ ][X][ ][ ][ ][ ]
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-5 [ ][ ][ ][ ][X][X][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-7 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 
 Filme 2:
- Título: Central do Brasil 
- Sinopse: Uma história emocionante sobre a amizade entre uma mulher idosa e um menino órfão em uma viagem pelo interior do Brasil. 
- Duração: 1h53m 
- Classificação: 8/10 
+ Título: Jogos Vorazes 
+ Sinopse: Num futuro distópico, jovens são selecionados para lutar até a morte em um reality show transmitido para toda a nação. 
+ Duração: 2h22m 
+ Classificação: 3,5/5 
 
- Sala do filme: Central do Brasil
+ Sala do filme: Jogos Vorazes
    A  B  C  D  E  F  G  H  I  J
 0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-1 [X][X][X][X][X][X][X][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
@@ -37,21 +37,154 @@ Filme 2:
 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 
 Filme 3:
- Título: Tropa de Elite 
- Sinopse: Um capitão do BOPE enfrenta desafios éticos e morais ao tentar combater a criminalidade no Rio de Janeiro. 
- Duração: 1h55m 
- Classificação: 8/10 
+ Título: Homem de Ferro 
+ Sinopse: Tony Stark, um industrialista bilionário, constrói uma armadura tecnológica para combater o mal como Homem de Ferro. 
+ Duração: 2h6m 
+ Classificação: 4,0/5 
 
- Sala do filme: Tropa de Elite
+ Sala do filme: Homem de Ferro
    A  B  C  D  E  F  G  H  I  J
-0 [X][X][X][X][X][X][X][X][X][X]
-1 [X][X][X][X][X][X][X][X][X][X]
-2 [X][X][X][X][X][X][X][X][X][X]
-3 [X][X][X][X][X][X][X][X][X][X]
-4 [X][X][X][X][X][X][X][ ][ ][ ]
-5 [X][X][X][X][X][X][X][ ][ ][ ]
-6 [X][X][ ][ ][ ][ ][ ][ ][X][ ]
-7 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-8 [ ][ ][ ][ ][ ][ ][ ][X][ ][ ]
-9 [ ][ ][ ][ ][X][ ][X][ ][ ][ ]
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+Filme 4:
+ Título: Jogos Mortais 
+ Sinopse: Um psicopata coloca suas vítimas em jogos mortais elaborados que testam sua capacidade de sobrevivência. 
+ Duração: 1h43m 
+ Classificação: 3,0/5 
+
+ Sala do filme: Jogos Mortais
+   A  B  C  D  E  F  G  H  I  J
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+Filme 5:
+ Título: Ratatouille 
+ Sinopse: Um rato chamado Remy sonha em se tornar um grande chef e forma uma parceria incomum com Linguini, um jovem cozinheiro. 
+ Duração: 1h51m 
+ Classificação: 4,5/5 
+
+ Sala do filme: Ratatouille
+   A  B  C  D  E  F  G  H  I  J
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+Filme 6:
+ Título: Toy Story 4 
+ Sinopse: Os brinquedos de Woody embarcam em uma aventura para salvar Forky, um brinquedo feito à mão, que não quer ser um brinquedo. 
+ Duração: 1h40m 
+ Classificação: 4,0/5 
+
+ Sala do filme: Toy Story 4
+   A  B  C  D  E  F  G  H  I  J
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+Filme 7:
+ Título: Homem-Aranha 
+ Sinopse: O adolescente Peter Parker adquire habilidades de aranha e assume a responsabilidade de proteger Nova York como o Homem-Aranha. 
+ Duração: 2h13m 
+ Classificação: 4,2/5 
+
+ Sala do filme: Homem-Aranha
+   A  B  C  D  E  F  G  H  I  J
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+Filme 8:
+ Título: Divertidamente 
+ Sinopse: As emoções dentro da mente de uma jovem chamada Riley ajudam-na a lidar com as mudanças em sua vida. 
+ Duração: 1h35m 
+ Classificação: 4,4/5 
+
+ Sala do filme: Divertidamente
+   A  B  C  D  E  F  G  H  I  J
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+Filme 9:
+ Título: Deadpool 
+ Sinopse: Um ex-militar com poderes regenerativos assume a identidade de Deadpool e busca vingança contra seus algozes. 
+ Duração: 1h49m 
+ Classificação: 4,8/5 
+
+ Sala do filme: Deadpool
+   A  B  C  D  E  F  G  H  I  J
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+Filme 10:
+ Título: Vingadores 
+ Sinopse: Os super-heróis da Marvel se reúnem para enfrentar uma ameaça intergaláctica liderada por Thanos. 
+ Duração: 2h29m 
+ Classificação: 4,7/5 
+
+ Sala do filme: Vingadores
+   A  B  C  D  E  F  G  H  I  J
+0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 
